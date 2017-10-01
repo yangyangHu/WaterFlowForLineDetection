@@ -7,7 +7,7 @@
 
 int main()
 {
-	IplImage* inputImage = cvLoadImage("E:\\上海中医药大学合作项目\\projects\\舌像特征提取\\裂纹\\data\\17.jpg",CV_LOAD_IMAGE_COLOR);
+	IplImage* inputImage = cvLoadImage(".\\data\\17.jpg",CV_LOAD_IMAGE_COLOR);
 	IplImage* grayImage = cvCreateImage(cvGetSize(inputImage),8,1);
 	cvCvtColor(inputImage,grayImage,CV_BGR2GRAY);
 
@@ -85,7 +85,7 @@ int main()
 	imagepro.areaGrow(image_L,areaMin);
 	cvShowImage("LAregrow",image_L);
 
-	//裂纹最终检测效果
+	//最终检测效果
 	for (int y=0;y<inputImage->height;y++)
 	{
 		for (int x=0;x<inputImage->width;x++)
